@@ -1,4 +1,4 @@
-# [Moon Mission Control Pannel](https://horizon-ui.com/horizon-ui-chakra) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/erdMoonMission)
+# [Moon Mission Control Panel](https://horizon-ui.com/horizon-ui-chakra) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/erdMoonMission)
 
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 [![GitHub issues open](https://img.shields.io/github/issues/horizon-ui/horizon-ui-chakra.svg?maxAge=2592000)](https://github.com/theejkb/Moon-Mission-Control-Pannel/issues?q=is%3Aissue+is%3Aopen+)
