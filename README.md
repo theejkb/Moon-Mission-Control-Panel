@@ -24,7 +24,7 @@ Install Moon Mission Control Pannel by running either of the following:
 Clone the repository with the following command:
 
 ```bash
-git clone https://github.com/horizon-ui/horizon-ui-chakra.git
+git clone https://github.com/theejkb/Moon-Mission-Control-Panel.git
 ```
 
 Run in terminal this command:
