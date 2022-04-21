@@ -22,51 +22,41 @@
 
 // Chakra imports
 import {
-  Avatar,
   Box,
   Flex,
-  FormLabel,
   Icon,
-  Select,
+  Text,
   SimpleGrid,
   useColorModeValue,
 } from "@chakra-ui/react";
 // Assets
-import Usa from "assets/img/dashboards/usa.png";
+import Banner from "views/admin/default/components/Banner";
+
 // Custom components
-import MiniCalendar from "components/calendar/MiniCalendar";
 import MiniStatistics from "components/card/MiniStatistics";
 import IconBox from "components/icons/IconBox";
 import React from "react";
-import { GiAstronautHelmet, GiWallet, GiBackForth } from "react-icons/gi";
-import {
-  MdAddTask,
-  MdAttachMoney,
-  MdBarChart,
-  MdFileCopy,
-} from "react-icons/md";
-import CheckTable from "views/admin/default/components/CheckTable";
-import ComplexTable from "views/admin/default/components/ComplexTable";
-import DailyTraffic from "views/admin/default/components/DailyTraffic";
-import PieCard from "views/admin/default/components/PieCard";
-import Tasks from "views/admin/default/components/Tasks";
-import TotalSpent from "views/admin/default/components/TotalSpent";
-import WeeklyRevenue from "views/admin/default/components/WeeklyRevenue";
-import {
-  columnsDataCheck,
-  columnsDataComplex,
-} from "views/admin/default/variables/columnsData";
-import tableDataCheck from "views/admin/default/variables/tableDataCheck.json";
-import tableDataComplex from "views/admin/default/variables/tableDataComplex.json";
+import NFT from "components/card/NFT";
+
+// Assets
+import Nft1 from "assets/img/nfts/Nft1.jpg";
+import Nft2 from "assets/img/nfts/Nft2.jpg";
+import Nft3 from "assets/img/nfts/Nft3.jpg";
+import Avatar1 from "assets/img/avatars/avatar1.png";
+import Avatar2 from "assets/img/avatars/avatar2.png";
+import Avatar4 from "assets/img/avatars/avatar4.png";
+import { GiAstronautHelmet, GiWallet } from "react-icons/gi";
 
 export default function UserReports() {
   // Chakra Color Mode
+  const textColorBrand = useColorModeValue("brand.500", "white");
+  const textColor = useColorModeValue("secondaryGray.900", "white");
   const brandColor = useColorModeValue("brand.500", "white");
   const boxBg = useColorModeValue("secondaryGray.300", "whiteAlpha.100");
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
       <SimpleGrid
-        columns={{ base: 1, md: 2, lg: 3, "2xl": 6 }}
+        columns={{ base: 1, md: 2, lg: 3, "2xl": 3 }}
         gap='20px'
         mb='20px'>
         <MiniStatistics
@@ -97,77 +87,58 @@ export default function UserReports() {
           name='Number of holders'
           value='680'
         />
-        <MiniStatistics growth='+23%' name='Number of trade' value='1545' />
-        <MiniStatistics
-          endContent={
-            <Flex me='-16px' mt='10px'>
-              <FormLabel htmlFor='balance'>
-                <Avatar src={Usa} />
-              </FormLabel>
-              <Select
-                id='balance'
-                variant='mini'
-                mt='5px'
-                me='0px'
-                defaultValue='usd'>
-                <option value='usd'>USD</option>
-                <option value='eur'>EUR</option>
-                <option value='gba'>GBA</option>
-              </Select>
-            </Flex>
-          }
-          name='Your balance'
-          value='$1,000'
-        />
-        <MiniStatistics
-          startContent={
-            <IconBox
-              w='56px'
-              h='56px'
-              bg='linear-gradient(90deg, #4481EB 0%, #04BEFE 100%)'
-              icon={<Icon w='28px' h='28px' as={MdAddTask} color='white' />}
-            />
-          }
-          name='New Tasks'
-          value='154'
-        />
-        <MiniStatistics
-          startContent={
-            <IconBox
-              w='56px'
-              h='56px'
-              bg={boxBg}
-              icon={
-                <Icon w='32px' h='32px' as={MdFileCopy} color={brandColor} />
-              }
-            />
-          }
-          name='Total Projects'
-          value='2935'
-        />
+        <MiniStatistics growth='+23%' name='Number of trade' value='1545' />        
       </SimpleGrid>
-
-      <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px' mb='20px'>
-        <TotalSpent />
-        <WeeklyRevenue />
+    
+      <SimpleGrid columns={{ base: 1, md: 1, xl: 1 }} gap='20px' mb='20px'>
+        {/* If not connected -> <Banner/> */}
       </SimpleGrid>
-      <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-        <CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} />
-        <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
-          <DailyTraffic />
-          <PieCard />
-        </SimpleGrid>
-      </SimpleGrid>
-      <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-        <ComplexTable
-          columnsData={columnsDataComplex}
-          tableData={tableDataComplex}
-        />
-        <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
-          <Tasks />
-          <MiniCalendar h='100%' minW='100%' selectRange={false} />
-        </SimpleGrid>
-      </SimpleGrid>
+      <Flex direction='column'>
+        <Flex
+          mt='45px'
+          mb='20px'
+          justifyContent='space-between'
+          direction={{ base: "column", md: "row" }}
+          align={{ base: "start", md: "center" }}
+        >          
+          <Text color={textColor} fontSize='2xl' ms='24px' fontWeight='700'>
+            In your wallet
+          </Text>         
+        </Flex>
+        <SimpleGrid columns={{ base: 2, md: 3, xl: 4 }} gap='20px'>
+          <NFT
+            name='Abstract Colors'
+            author='By Esthera Jackson'
+            bidders={[Avatar4,              
+            ]}
+            image={Nft1}
+            currentBid='0.91 ETH'
+            download='#'
+            height='300px'
+          />
+          <NFT
+            name='ETH AI Brain'
+            author='By Nick Wilson'
+            bidders={[Avatar2,
+              
+            ]}
+            image={Nft2}
+            currentBid='0.91 ETH'
+            download='#'
+          />
+          <NFT
+            name='Mesh Gradients '
+            author='By Will Smith'
+            bidders={[
+              Avatar1             
+            ]}
+            image={Nft3}
+            currentBid='0.91 ETH'
+            download='#'
+          />
+        </SimpleGrid>       
+      </Flex>
+  
     </Box>
   );
 }

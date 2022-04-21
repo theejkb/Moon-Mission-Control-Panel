@@ -17,7 +17,7 @@ export default function Banner() {
       px={{ base: "30px", md: "64px" }}
       borderRadius='30px'>
       <Text
-        fontSize={{ base: "24px", md: "34px" }}
+        fontSize={{ base: "28px", md: "42px" }}
         color='white'
         mb='14px'
         maxW={{
@@ -30,7 +30,7 @@ export default function Banner() {
         }}
         fontWeight='700'
         lineHeight={{ base: "32px", md: "42px" }}>
-        Discover, collect, and sell extraordinary NFTs
+        Welcome to the Moon Mission
       </Text>
       <Text
         fontSize='md'

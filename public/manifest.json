@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "MMCP",
+  "name": "Moon Mission Control Pannel",
   "icons": [
     {
       "src": "favicon.ico",

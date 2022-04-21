@@ -56,7 +56,7 @@ export default function NFT(props) {
             />
           </Button>
         </Box>
-        <Flex flexDirection='column' justify='space-between' h='100%'>
+        <Flex flexDirection='column' justify='space-between' h='50%'>
           <Flex
             justify='space-between'
             direction={{
