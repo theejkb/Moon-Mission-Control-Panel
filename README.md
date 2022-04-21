@@ -4,7 +4,7 @@
 [![GitHub issues open](https://img.shields.io/github/issues/horizon-ui/horizon-ui-chakra.svg?maxAge=2592000)](https://github.com/theejkb/Moon-Mission-Control-Pannel/issues?q=is%3Aissue+is%3Aopen+)
 [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/horizon-ui/horizon-ui-chakra.svg?maxAge=2592000)](https://github.com/theejkb/Moon-Mission-Control-Pannel/issues?q=is%3Aissue+is%3Aclosed)
 
-[<img alt="Moon Mission" src="https://i.ibb.co/fdyTwz1/introduction-image-2.png" /> ](https://github.com/theejkb/Moon-Mission-Control-Pannel)
+[<img alt="Moon Mission" src="https://github.com/theejkb/Moon-Mission-Control-Pannel/blob/master/src/assets/img/github/moonmissionoverview.jpg" /> ](https://github.com/theejkb/Moon-Mission-Control-Pannel)
 
 ### Documentation
 
